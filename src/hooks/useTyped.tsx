@@ -8,8 +8,8 @@ const useTyped = (strings: string[], typedSpeed: number, backSpeed: number, extr
     useEffect(() => {
         const options = {
             strings,
-            typeSpeed: typedSpeed, // 100
-            backSpeed: backSpeed, // 80
+            typeSpeed: typedSpeed,
+            backSpeed: backSpeed,
             ...extra
         };
 
