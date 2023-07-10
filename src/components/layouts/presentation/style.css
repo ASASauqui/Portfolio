@@ -1,0 +1,13 @@
+/* ----------------General---------------- */
+.image-container {
+    background: linear-gradient(180deg, #1d142b, #4a3142);
+}
+
+.image-container img {
+    filter:contrast(105%);
+    transition: scale 0.5s;
+}
+
+.image-container img:hover {
+    scale: 0.9;
+}

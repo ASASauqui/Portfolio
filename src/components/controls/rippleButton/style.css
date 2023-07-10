@@ -12,6 +12,20 @@
 
 
 
+/* ----------------Colors---------------- */
+.purple {
+    background: linear-gradient(180deg, #584b6e, #30212b);
+}
+
+.purple:hover {
+    background: linear-gradient(180deg, #705c94, #30212b);
+}
+
+
+
+
+
+
 /* ----------------Animation---------------- */
 @keyframes ripple-animation {
     0% {

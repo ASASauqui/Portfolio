@@ -3,14 +3,13 @@ import './style.css';
 
 interface ListElementProps {
     text: string;
-    colorFrom: string;
-    colorTo: string;
+    color: string;
     emoji?: string;
     time?: number;
     onClick?: Function;
 }
 
-const RippleButton: React.FC<ListElementProps> = ({text, colorFrom, colorTo, emoji, time, onClick}) => {
+const RippleButton: React.FC<ListElementProps> = ({text, color, emoji, time, onClick}) => {
     const rippleTime = time ? time : 1000;
 
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -32,8 +31,8 @@ const RippleButton: React.FC<ListElementProps> = ({text, colorFrom, colorTo, emo
 
     return (
         <>
-            <button className={`relative mx-auto w-[150px] h-[50px] flex justify-center bg-gradient-to-br from-[${colorFrom}] to-[${colorTo}] items-center rounded-[5px] hover:-translate-y-1 shadow-2xl cursor-pointer overflow-hidden transition duration-300 ease-out`} onClick={handleClick}>
-                <a className="text-center text-[13px] text-white font-semibold mr-1">{text}</a>
+            <button className={`${color} relative mx-auto w-[150px] h-[50px] flex justify-center bg-gradient-to-br items-center rounded-[5px] hover:-translate-y-1 shadow-2xl cursor-pointer overflow-hidden transition duration-300 ease-out`} onClick={handleClick}>
+                <div className="text-center text-[13px] text-white font-semibold mr-1">{text}</div>
 
                 {emoji ?
                     <div className="text-[20px]">{emoji}</div>
